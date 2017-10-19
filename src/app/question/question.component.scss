@@ -6,10 +6,24 @@
     align-items: center;
     svg {
       margin: 0.5em;
+      flex-shrink: 0;
     }
-    span {
-      margin-left: 1em;
-    }
+  }
+}
+
+.question {
+  margin-left: 1em;
+  min-width: 180px;
+  border-style: double;
+  max-width: 600px;
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  .question {
+    margin-left: 1em;
+    flex: 1 1 150px;
+    max-width: 500px;
+    min-width: 180px;
   }
 }
 
@@ -19,6 +33,7 @@
   }
   font-weight: bold;
 }
+
 .worst {
   path:nth-child(2) {
     fill: red;
@@ -26,3 +41,8 @@
   text-decoration: line-through;
 }
 
+.panel {
+  border-radius: 0.5em;
+  margin: 0.5em;
+  background-image: repeating-linear-gradient(180deg, white, #D0D0FF);
+}

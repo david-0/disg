@@ -1,4 +1,6 @@
-<p *ngFor="let q of questions">
-  <app-question [question]="q" (onAnswerChange)="onAnswerChange($event)"></app-question>
-</p>
+<div class="container">
+  <div *ngFor="let q of questions" class="panel">
+    <app-question [question]="q" (onAnswerChange)="onAnswerChange($event)"></app-question>
+  </div>
+</div>
 
