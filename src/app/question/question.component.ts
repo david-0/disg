@@ -3,11 +3,11 @@ import {Answer} from '../model/answer';
 import {Question} from '../model/question';
 
 @Component({
-  selector: 'app-question2',
-  templateUrl: './question2.component.html',
-  styleUrls: ['./question2.component.scss']
+  selector: 'app-question',
+  templateUrl: './question.component.html',
+  styleUrls: ['./question.component.scss']
 })
-export class Question2Component implements OnInit {
+export class QuestionComponent implements OnInit {
 
   @ViewChild('group') group: ElementRef;
   @Input() question: Question;
@@ -15,9 +15,6 @@ export class Question2Component implements OnInit {
 
   public answer: Answer;
 
-  /*  public up: any[] = [];
-    public down: any[] = [];
-    public span: any[] = [];*/
   constructor(private renderer: Renderer2) {
   }
 

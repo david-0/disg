@@ -6,7 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 import {EvaluationComponent} from './evaluation/evaluation.component';
-import {Question2Component} from './question2/question2.component';
+import {QuestionComponent} from './question/question.component';
 import {AnswerService} from './service/answer.service';
 import {QuestionService} from './service/question.service';
 
@@ -14,7 +14,7 @@ import {QuestionService} from './service/question.service';
   declarations: [
     AppComponent,
     EvaluationComponent,
-    Question2Component,
+    QuestionComponent,
   ],
   imports: [
     BrowserModule,
