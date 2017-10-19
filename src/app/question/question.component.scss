@@ -1,0 +1,14 @@
+.question-group {
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0.5em;
+    }
+    span {
+      margin-left: 1em;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.question-group {
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    align-items: center;
+    svg {
+      margin: 0.5em;
+    }
+    span {
+      margin-left: 1em;
+    }
+  }
+}
+
+.best {
+  path:nth-child(2) {
+    fill: green;
+  }
+  font-weight: bold;
+}
+.worst {
+  path:nth-child(2) {
+    fill: red;
+  }
+  text-decoration: line-through;
+}
+
