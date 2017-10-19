@@ -1,9 +1,0 @@
-<mat-card>
-  <div #group class="question-group">
-    <div *ngFor="let statement of question.statements; let i = index;">
-      <img (click)="change('up', i)" src="assets/img/thumb-up.svg" width="30px">
-      <img (click)="change('down', i)" src="assets/img/thumb-down.svg" width="30px">
-      <span>{{statement}}</span>
-    </div>
-  </div>
-</mat-card>

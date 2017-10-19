@@ -6,7 +6,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 import {EvaluationComponent} from './evaluation/evaluation.component';
-import {QuestionComponent} from './question/question.component';
 import {Question2Component} from './question2/question2.component';
 import {AnswerService} from './service/answer.service';
 import {QuestionService} from './service/question.service';
@@ -14,7 +13,6 @@ import {QuestionService} from './service/question.service';
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionComponent,
     EvaluationComponent,
     Question2Component,
   ],
