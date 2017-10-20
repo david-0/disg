@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   questions: Question[];
 
-  constructor(private answerService: AnswerService, private questionService: QuestionService) {
+  constructor(public answerService: AnswerService, private questionService: QuestionService) {
   }
 
   ngOnInit() {

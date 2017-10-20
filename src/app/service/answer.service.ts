@@ -1,12 +1,13 @@
-import {Injectable} from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {Answer} from '../model/answer';
 
 @Injectable()
 export class AnswerService {
-  private _answer = new Map<number, Answer>();
+  private _answers = new Map<number, Answer>();
   private _storageName = 'default';
 
   constructor() {
+    this.loadLocalStorage(this._storageName);
   }
 
   public get storageName() {
@@ -18,12 +19,30 @@ export class AnswerService {
   }
 
   setValue(position: number, answer: Answer) {
-    this._answer.set(position, answer);
+    this._answers.set(position, answer);
     this.saveLocalStorage(this._storageName);
   }
 
-  private saveLocalStorage(name: string) {
-    localStorage.setItem(name, JSON.stringify(this._answer));
+  getValue(position: number): Answer {
+    let answer = this._answers.get(position);
+    if (!answer) {
+      answer = new Answer(position, -1, -1);
+    }
+    return answer;
   }
 
+  private saveLocalStorage(name: string) {
+    const answers: Answer[] = [];
+    this._answers.forEach((answer: Answer, position: number) => {
+      answers.push(answer);
+    });
+    localStorage.setItem(name, JSON.stringify(answers));
+  }
+
+  private loadLocalStorage(name: string) {
+    const answers = JSON.parse(localStorage.getItem(name));
+    answers.forEach((answer: Answer) => {
+      this._answers.set(answer.questionId, answer);
+    });
+  }
 }

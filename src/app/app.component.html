@@ -1,6 +1,6 @@
 <div class="container">
   <div *ngFor="let q of questions" class="panel">
-    <app-question [question]="q" (onAnswerChange)="onAnswerChange($event)"></app-question>
+    <app-question [question]="q" [answer]="answerService.getValue(q.id)" (onAnswerChange)="onAnswerChange($event)"></app-question>
   </div>
 </div>
 

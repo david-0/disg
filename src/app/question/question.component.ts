@@ -1,4 +1,7 @@
-import {Component, OnInit, ElementRef, EventEmitter, Output, Input, ViewChild, Renderer2} from '@angular/core';
+import {
+  Component, OnInit, ElementRef, EventEmitter, Output, Input, ViewChild, Renderer2,
+  AfterContentChecked, DoCheck, AfterViewChecked
+} from '@angular/core';
 import {Answer} from '../model/answer';
 import {Question} from '../model/question';
 
@@ -7,23 +10,17 @@ import {Question} from '../model/question';
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss']
 })
-export class QuestionComponent implements OnInit {
-
+export class QuestionComponent implements AfterViewChecked {
   @ViewChild('group') group: ElementRef;
   @Input() question: Question;
+  @Input() answer: Answer;
   @Output() onAnswerChange = new EventEmitter<Answer>();
-
-  public answer: Answer;
 
   constructor(private renderer: Renderer2) {
   }
 
-  ngOnInit() {
-    this.answer = new Answer(this.question.id, -1, -1);
-  }
-
-  changeBest(id: number) {
-    console.log(id);
+  ngAfterViewChecked(): void {
+    this.updateView();
   }
 
   change(type: string, number: string) {
@@ -40,13 +37,14 @@ export class QuestionComponent implements OnInit {
       }
     }
     this.updateView();
+    this.onAnswerChange.emit(this.answer);
     console.log(this.answer);
   }
 
   private updateView() {
     const images = this.group.nativeElement.getElementsByTagName('svg');
     const spans = this.group.nativeElement.getElementsByTagName('span');
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < this.question.statements.length; i++) {
       const imageUp = images[i * 2];
       const imageDown = images[i * 2 + 1];
       const span = spans[i];
