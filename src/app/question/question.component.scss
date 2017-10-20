@@ -11,14 +11,6 @@
   }
 }
 
-.question {
-  margin-left: 0.5em;
-  min-width: 400px;
-  max-width: 400px;
-  padding: 0.25em;
-  border-radius: 0.25em;
-  background-image: repeating-linear-gradient(180deg, white, transparent);
-}
 
 .panel {
   border-radius: 0.5em;
@@ -40,11 +32,21 @@
   text-decoration: line-through;
 }
 
+.question {
+  margin-left: 0.5em;
+  min-width: 400px;
+  max-width: 400px;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  background-image: repeating-linear-gradient(180deg, white, transparent);
+}
+
+
 @media screen and (min-device-width: 320px) and (max-device-width: 700px) {
   .question {
     max-width: 500px;
     min-width: 100px;
-    padding: 0.25em;
+    padding: 0.5em;
     border-radius: 0.25em;
     background-image: repeating-linear-gradient(180deg, white, transparent);
   }
