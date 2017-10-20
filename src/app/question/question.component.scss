@@ -15,7 +15,7 @@
 .panel {
   border-radius: 0.5em;
   margin: 0.5em;
-  background-image: repeating-linear-gradient(180deg, white, #D0D0FF);
+  background-image: repeating-linear-gradient(180deg, white, #E0E0FF);
 }
 
 .best {
@@ -37,7 +37,7 @@
   min-width: 400px;
   max-width: 400px;
   padding: 0.5em;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   background-image: repeating-linear-gradient(180deg, white, transparent);
 }
 
@@ -47,7 +47,7 @@
     max-width: 500px;
     min-width: 100px;
     padding: 0.5em;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
     background-image: repeating-linear-gradient(180deg, white, transparent);
   }
 }

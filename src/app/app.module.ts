@@ -1,6 +1,12 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatCardModule, MatButtonToggleModule, MatButtonModule, MatRadioModule} from '@angular/material';
+import {
+  MatCardModule,
+  MatButtonToggleModule,
+  MatButtonModule,
+  MatRadioModule,
+  MatToolbarModule, MatExpansionModule
+} from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -26,6 +32,8 @@ import {QuestionService} from './service/question.service';
     BrowserModule,
     MatButtonToggleModule,
     MatButtonModule,
+    MatToolbarModule,
+    MatExpansionModule,
   ],
   providers: [
     AnswerService,

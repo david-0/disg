@@ -1,0 +1,35 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$my-theme-primary: mat-palette($mat-light-blue, 500, 500, 500);  // default, ligher, darker
+$my-theme-accent: mat-palette($mat-blue-grey);
+$my-theme-warn: mat-palette($mat-deep-orange, A100);
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$my-theme: mat-light-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
+
+/*@import "app/table-support/table-header/table-header.component.scss-theme";
+@import "app/childs/administration/administration.component.scss-theme";
+@import "app/childs/transport/transport-overview/transport-overview.component.scss-theme";
+@import "app/childs/fruit/fruit-overview/fruit-overview.component.scss-theme";*/
+
+@mixin my-component-theme($theme) {
+/*  @include app-list-header-theme($theme);
+  @include app-administration-theme($theme);
+  @include app-transport-overview-theme($theme);
+  @include app-fruit-overview-theme($theme);*/
+}
+@include angular-material-theme($my-theme);
+@include my-component-theme($my-theme);
+
+
+//   Themes: Einstieg mit Blog, details in youtube
+//  https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
+//  https://www.youtube.com/watch?v=PsgZjFTAleI
