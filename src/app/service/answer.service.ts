@@ -10,14 +10,6 @@ export class AnswerService {
     this.loadLocalStorage(this._storageName);
   }
 
-  public get storageName() {
-    return this.storageName;
-  }
-
-  public set storageName(name: string) {
-    this.storageName = name;
-  }
-
   setValue(position: number, answer: Answer) {
     this._answers.set(position, answer);
     this.saveLocalStorage(this._storageName);
