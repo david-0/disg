@@ -15,12 +15,16 @@ import {EvaluationComponent} from './evaluation/evaluation.component';
 import {QuestionComponent} from './question/question.component';
 import {AnswerService} from './service/answer.service';
 import {QuestionService} from './service/question.service';
+import { ManualComponent } from './manual/manual.component';
+import { DataprotectionComponent } from './dataprotection/dataprotection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EvaluationComponent,
     QuestionComponent,
+    ManualComponent,
+    DataprotectionComponent,
   ],
   imports: [
     BrowserModule,

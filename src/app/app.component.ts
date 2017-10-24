@@ -10,7 +10,6 @@ import {QuestionService} from './service/question.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
   questions: Question[];
 
   constructor(public answerService: AnswerService, private questionService: QuestionService) {
@@ -24,3 +23,4 @@ export class AppComponent implements OnInit {
     this.answerService.setValue(answer.questionId, answer);
   }
 }
+

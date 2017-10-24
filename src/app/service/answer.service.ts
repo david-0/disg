@@ -31,6 +31,11 @@ export class AnswerService {
     return answer;
   }
 
+  deleteCache() {
+    localStorage.clear();
+    this._answers.clear();
+  }
+
   private saveLocalStorage(name: string) {
     const answers: Answer[] = [];
     this._answers.forEach((answer: Answer, position: number) => {
@@ -41,8 +46,10 @@ export class AnswerService {
 
   private loadLocalStorage(name: string) {
     const answers = JSON.parse(localStorage.getItem(name));
-    answers.forEach((answer: Answer) => {
-      this._answers.set(answer.questionId, answer);
-    });
+    if (answers) {
+      answers.forEach((answer: Answer) => {
+        this._answers.set(answer.questionId, answer);
+      });
+    }
   }
 }

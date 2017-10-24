@@ -1,0 +1,20 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Daten
+    </mat-panel-title>
+    <mat-panel-description>
+      Datenschutz
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <article>
+    <h1>Datenschutz</h1>
+    <p>Die eingegeben Daten werden an <strong>keinen Server</strong> geschickt und nur lokal in deinem Browser
+      gespeichert, damit die Daten beim Neuladen der Webseite nicht verloren gehen.</p>
+    <p>Wenn du deine Resultate nicht mehr benötigst, dann lösche sie zu deinem eigenen Schutz mit folgendem Knopf.</p>
+    <div class="container">
+      <span class="fill-remaining-space"></span>
+      <button mat-raised-button (click)="answerService.deleteCache()" color="primary">Antworten löschen</button>
+    </div>
+  </article>
+</mat-expansion-panel>
