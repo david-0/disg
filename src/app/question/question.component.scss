@@ -11,7 +11,6 @@
   }
 }
 
-
 .panel {
   border-radius: 0.5em;
   margin: 0.5em;
@@ -25,6 +24,18 @@
   font-weight: bold;
 }
 
+.middleUp {
+  path:nth-child(2) {
+    fill: #00ff02;
+  }
+}
+
+.middleDown {
+  path:nth-child(2) {
+    fill: #ffa200;
+  }
+}
+
 .worst {
   path:nth-child(2) {
     fill: red;
@@ -34,13 +45,12 @@
 
 .question {
   margin-left: 0.5em;
-  min-width: 400px;
-  max-width: 400px;
+  min-width: 250px;
+  max-width: 250px;
   padding: 0.5em;
   border-radius: 0.5em;
   background-image: repeating-linear-gradient(180deg, white, transparent);
 }
-
 
 @media screen and (min-device-width: 320px) and (max-device-width: 700px) {
   .question {
