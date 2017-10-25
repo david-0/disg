@@ -10,17 +10,12 @@ import {QuestionService} from './service/question.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  questions: Question[];
 
-  constructor(public answerService: AnswerService, private questionService: QuestionService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.questions = this.questionService.questions;
   }
 
-  onAnswerChange(answer: Answer) {
-    this.answerService.setValue(answer.questionId, answer);
-  }
 }
 

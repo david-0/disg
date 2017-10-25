@@ -1,14 +1,4 @@
 <mat-toolbar color="primary">
   <span>Test</span>
 </mat-toolbar>
-<app-manual></app-manual>
-<app-dataprotection></app-dataprotection>
-<div class="container">
-  <div *ngFor="let q of questions" class="panel">
-    <app-question [question]="q" [answer]="answerService.getValue(q.id)"
-                  (onAnswerChange)="onAnswerChange($event)"></app-question>
-  </div>
-</div>
-<div class="evaluation">
-  <button mat-raised-button color="primary">Auswertung</button>
-</div>
+<router-outlet></router-outlet>
