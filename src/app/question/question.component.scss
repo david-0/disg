@@ -18,26 +18,26 @@
 }
 
 .best {
-  path:nth-child(2) {
+  circle, rect {
     fill: green;
   }
   font-weight: bold;
 }
 
 .middleUp {
-  path:nth-child(2) {
+  circle, rect {
     fill: #00ff02;
   }
 }
 
 .middleDown {
-  path:nth-child(2) {
+  circle, rect {
     fill: #ffa200;
   }
 }
 
 .worst {
-  path:nth-child(2) {
+  circle, rect {
     fill: red;
   }
   text-decoration: line-through;
