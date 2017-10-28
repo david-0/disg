@@ -9,6 +9,7 @@ import {EvaluationService} from '../service/evaluation.service';
 export class EvaluationComponent implements OnInit {
 
   public result: number[];
+  private quadrantWith = 200;
 
   constructor(private evaluationService: EvaluationService) {
   }
@@ -17,4 +18,9 @@ export class EvaluationComponent implements OnInit {
     this.result = this.evaluationService.evaluate();
   }
 
+  calc(points: number): number {
+    const value = 1 / 30 * (points - 10) * this.quadrantWith
+    console.info(points + '(' + value + ')');
+    return 1 / 30 * (points - 10 ) * this.quadrantWith;
+  }
 }

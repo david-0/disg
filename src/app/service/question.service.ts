@@ -29,9 +29,9 @@ export class QuestionService {
       new Statement('s', 'teamfähig'),
       new Statement('i', 'begeistert')]));
     this._questions.push(new Question(5, [
-      new Statement('i', 'vertrauensvoll'),
+      new Statement('s', 'vertrauensvoll'),
       new Statement('g', 'analytisch'),
-      new Statement('s', 'beliebt'),
+      new Statement('i', 'beliebt'),
       new Statement('d', 'kraftvoll')]));
     this._questions.push(new Question(6, [
       new Statement('d', 'ergebinsorientiert'),
@@ -39,14 +39,14 @@ export class QuestionService {
       new Statement('i', 'enthusiastisch'),
       new Statement('g', 'selbstdiszipliniert')]));
     this._questions.push(new Question(7, [
-      new Statement('s', 'positiv'),
+      new Statement('i', 'positiv'),
       new Statement('d', 'risikofreudig'),
       new Statement('g', 'zurückhaltend'),
-      new Statement('i', 'unterstützend')]));
+      new Statement('s', 'unterstützend')]));
     this._questions.push(new Question(8, [
-      new Statement('s', 'kritisch'),
+      new Statement('g', 'kritisch'),
       new Statement('i', 'impulsiv'),
-      new Statement('g', 'zuverlässig'),
+      new Statement('s', 'zuverlässig'),
       new Statement('d', 'zielorientiert')]));
     this._questions.push(new Question(9, [
       new Statement('i', 'gesellig'),
