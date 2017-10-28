@@ -6,7 +6,7 @@ import {
   MatButtonModule,
   MatRadioModule,
   MatToolbarModule,
-  MatExpansionModule
+  MatExpansionModule, MatChipsModule
 } from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -44,6 +44,7 @@ import {QuestionService} from './service/question.service';
     MatToolbarModule,
     MatExpansionModule,
     AppRouteModule,
+    MatChipsModule,
   ],
   providers: [
     AnswerService,
