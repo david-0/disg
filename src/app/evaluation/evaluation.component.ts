@@ -20,7 +20,6 @@ export class EvaluationComponent implements OnInit {
 
   calc(points: number): number {
     const value = 1 / 30 * (points - 10) * this.quadrantWith
-    console.info(points + '(' + value + ')');
     return 1 / 30 * (points - 10 ) * this.quadrantWith;
   }
 }
