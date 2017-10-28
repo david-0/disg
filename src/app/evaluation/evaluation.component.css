@@ -11,3 +11,10 @@
 .wrapped {
   flex-wrap: wrap;
 }
+
+.mat-card {
+  padding: 0.8em;
+}
+.card {
+  width: 100%;
+}
