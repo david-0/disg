@@ -3,37 +3,45 @@
   flex-direction: column;
   div {
     display: flex;
-    align-items: center;
-    svg {
-      margin: 0.5em;
-      flex-shrink: 0;
-    }
-    app-point {
-      margin: 0.3em;
-      flex-shrink: 0;
-    }
   }
 }
 
 .panel {
   border-radius: 0.5em;
-  margin: 0.5em;
+  margin: 0.3em;
   background-image: repeating-linear-gradient(180deg, white, #E0E0FF);
+}
+
+.mat-card {
+  padding: 0.5em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.statement {
+  padding: 0.2em;
 }
 
 .question {
   margin-left: 0.5em;
-  min-width: 250px;
-  max-width: 250px;
-  padding: 0.5em;
+  min-width: 150px;
+  max-width: 150px;
+  padding: 0 0.4em;
   border-radius: 0.5em;
-  background-image: repeating-linear-gradient(180deg, white, transparent);
+  background-image: repeating-linear-gradient(180deg, white, #bbbbff);
+
+  display: inline-flex;
+  align-items: center;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 700px) {
   .question {
     max-width: 500px;
-    min-width: 100px;
+    min-width: 150px;
     padding: 0.5em;
     border-radius: 0.5em;
     background-image: repeating-linear-gradient(180deg, white, transparent);

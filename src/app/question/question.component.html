@@ -1,6 +1,6 @@
 <mat-card class="panel">
   <div #group class="question-group">
-    <div *ngFor="let statement of question.statements; let i = index;">
+    <div *ngFor="let statement of question.statements; let i = index;" class="container statement">
       <app-points (onChange)="change($event, i)" [selected]="answer.priorities[i]"></app-points>
       <span class="question">{{statement.statement}}</span>
     </div>
