@@ -10,6 +10,7 @@ import {
 } from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppRouteModule} from './app-route.module';
 
 import {AppComponent} from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
@@ -18,8 +19,8 @@ import {EvaluationComponent} from './evaluation/evaluation.component';
 import {ManualComponent} from './manual/manual.component';
 import {QuestionComponent} from './question/question.component';
 import {AnswerService} from './service/answer.service';
+import {EvaluationService} from './service/evaluation.service';
 import {QuestionService} from './service/question.service';
-import {AppRouteModule} from './app-route.module';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import {AppRouteModule} from './app-route.module';
   providers: [
     AnswerService,
     QuestionService,
+    EvaluationService,
   ],
   bootstrap: [AppComponent]
 })

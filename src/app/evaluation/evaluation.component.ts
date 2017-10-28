@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EvaluationService} from '../service/evaluation.service';
 
 @Component({
   selector: 'app-evaluation',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EvaluationComponent implements OnInit {
 
-  constructor() { }
+  public result: number[];
+
+  constructor(private evaluationService: EvaluationService) {
+  }
 
   ngOnInit() {
+    this.result = this.evaluationService.evaluate();
   }
 
 }
