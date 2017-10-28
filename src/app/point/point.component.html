@@ -1,0 +1,7 @@
+<svg #svg (click)="myChange()" version="1.1" x="0px" y="0px" width="30px" viewBox="0 0 30 30">
+  <rect x="1" y="1" width="28" height="28" stroke-width="2" rx="4" ry="4" stroke="black" [attr.fill]="backgroundColor(selected)"/>
+  <circle *ngIf="points > 2" cx="10" cy="10" r="2.5" stroke-width="0" fill="black"/>
+  <circle *ngIf="points > 1" cx="10" cy="20" r="2.5" stroke-width="0" fill="black"/>
+  <circle *ngIf="points > 0" cx="20" cy="10" r="2.5" stroke-width="0" fill="black"/>
+  <circle cx="20" cy="20" r="2.5" stroke-width="0" fill="black"/>
+</svg>

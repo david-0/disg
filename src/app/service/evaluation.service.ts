@@ -9,13 +9,13 @@ export class EvaluationService {
   }
 
   public evaluate() {
-    const result = [40, 40, 40, 40]; // max points
+    const result = [10, 10, 10, 10];
     const mapping = ['d', 'i', 's', 'g'];
     this.questionService.questions.forEach(q => {
       const a = this.answerService.getValue(q.id);
       for (let i = 0; i < a.priorities.length; i++) {
         const pos = mapping.indexOf(q.statements[i].key);
-        result[pos] -= a.priorities[i]; // remove difference from maxium
+        result[pos] += a.priorities[i];
       }
     });
     return result;

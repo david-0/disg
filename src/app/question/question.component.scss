@@ -8,6 +8,10 @@
       margin: 0.5em;
       flex-shrink: 0;
     }
+    app-point {
+      margin: 0.3em;
+      flex-shrink: 0;
+    }
   }
 }
 
@@ -15,32 +19,6 @@
   border-radius: 0.5em;
   margin: 0.5em;
   background-image: repeating-linear-gradient(180deg, white, #E0E0FF);
-}
-
-.best {
-  circle, rect {
-    fill: green;
-  }
-  font-weight: bold;
-}
-
-.middleUp {
-  circle, rect {
-    fill: #00ff02;
-  }
-}
-
-.middleDown {
-  circle, rect {
-    fill: #ffa200;
-  }
-}
-
-.worst {
-  circle, rect {
-    fill: red;
-  }
-  text-decoration: line-through;
 }
 
 .question {

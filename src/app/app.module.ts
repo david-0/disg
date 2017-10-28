@@ -21,6 +21,8 @@ import {QuestionComponent} from './question/question.component';
 import {AnswerService} from './service/answer.service';
 import {EvaluationService} from './service/evaluation.service';
 import {QuestionService} from './service/question.service';
+import {PointComponent} from './point/point.component';
+import { PointsComponent } from './points/points.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import {QuestionService} from './service/question.service';
     ManualComponent,
     DataprotectionComponent,
     DashboardComponent,
+    PointComponent,
+    PointsComponent,
   ],
   imports: [
     BrowserModule,
