@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prod": "ng build --prod && node server.js",
+    "prod": "ng build --prod && export PORT=80 && node server.js",
     "run": "node server.js"
   },
   "private": true,

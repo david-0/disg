@@ -6,75 +6,87 @@
 <div class="container">
   <span class="fill-remaining-space"></span>
   <mat-card class="card">
-    <svg version="1.1" x="0px" y="0px" viewBox="-250 -250 500 500">
-      <rect id="d" x="-250" y="-250" width="250" height="250" fill="#ff0000" opacity="0.8"/>
-      <rect id="i" x="0" y="-250" width="250" height="250" fill="#ffff00" opacity="0.8"/>
-      <rect id="s" x="0" y="0" width="250" height="250" fill="#00ff00" opacity="0.8"/>
-      <rect id="g" x="-250" y="0" width="250" height="250" fill="#0000ff" opacity="0.8"/>
-      <text text-anchor="middle" x="-100" y="-70" font-weight="800" font-size="5em" fill="white">D</text>
-      <text text-anchor="middle" x="100" y="-70" font-weight="800" font-size="5em" fill="white">I</text>
-      <text text-anchor="middle" x="100" y="130" font-weight="800" font-size="5em" fill="white">S</text>
-      <text text-anchor="middle" x="-100" y="130" font-weight="800" font-size="5em" fill="white">G</text>
+    <mat-card-subtitle *ngIf="evaluationService.allQuestionsCompleted()">Es wurden alle Fragen vollständig beantwortet.
+    </mat-card-subtitle>
+    <mat-card-subtitle *ngIf="!evaluationService.allQuestionsCompleted()">Die Auswertung konnte aufgrund von fehlenden
+      Antworten nicht erstellt werden.
+      <ul>
+        <li>{{evaluationService.completeAnsweredQuestions()}} Fragen vollständig beantwortet</li>
+        <li>{{evaluationService.partialAnsweredQuestions()}} Fragen nicht oder nur teilweise beantwortet</li>
+      </ul>
+      Bitte zuerst alle Fragen beantworten.
+    </mat-card-subtitle>
+    <div *ngIf="evaluationService.allQuestionsCompleted()">
+      <svg version="1.1" x="0px" y="0px" viewBox="-250 -250 500 500">
+        <rect id="d" x="-250" y="-250" width="250" height="250" fill="#ff0000" opacity="0.8"/>
+        <rect id="i" x="0" y="-250" width="250" height="250" fill="#ffff00" opacity="0.8"/>
+        <rect id="s" x="0" y="0" width="250" height="250" fill="#00ff00" opacity="0.8"/>
+        <rect id="g" x="-250" y="0" width="250" height="250" fill="#0000ff" opacity="0.8"/>
+        <text text-anchor="middle" x="-100" y="-70" font-weight="800" font-size="5em" fill="white">D</text>
+        <text text-anchor="middle" x="100" y="-70" font-weight="800" font-size="5em" fill="white">I</text>
+        <text text-anchor="middle" x="100" y="130" font-weight="800" font-size="5em" fill="white">S</text>
+        <text text-anchor="middle" x="-100" y="130" font-weight="800" font-size="5em" fill="white">G</text>
 
 
-      <path attr.d="M-250,-250v500h500v-500z M{{-calc(result[0])}},{{-calc(result[0])}}
+        <path attr.d="M-250,-250v500h500v-500z M{{-calc(result[0])}},{{-calc(result[0])}}
       L{{calc(result[1])}},{{-calc(result[1])}} L{{calc(result[2])}},{{calc(result[2])}}
       L{{-calc(result[3])}},{{calc(result[3])}} z" fill="white" opacity="0.5"/>
-      <rect x="-200" y="-200" width="400" height="400" stroke-width="2" stroke="#000000" fill="transparent"/>
-      <line x1="0" y1="0" x2="-200" y2="-200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
-      <line x1="0" y1="0" x2="200" y2="-200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
-      <line x1="0" y1="0" x2="-200" y2="200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
-      <line x1="0" y1="0" x2="200" y2="200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
+        <rect x="-200" y="-200" width="400" height="400" stroke-width="2" stroke="#000000" fill="transparent"/>
+        <line x1="0" y1="0" x2="-200" y2="-200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
+        <line x1="0" y1="0" x2="200" y2="-200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
+        <line x1="0" y1="0" x2="-200" y2="200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
+        <line x1="0" y1="0" x2="200" y2="200" stroke="#000000" stroke-width="1" stroke-dasharray="1,4"/>
 
-      <!-- axis labels -->
-      <text x="0" y="0" fill="black">10</text>
-      <text text-anchor="end" x="-200" y="-205" fill="black">40</text>
-      <text text-anchor="start" x="200" y="-205" fill="black">40</text>
-      <text text-anchor="start" x="200" y="215" fill="black">40</text>
-      <text text-anchor="end" x="-200" y="215" fill="black">40</text>
-      <!-- DISG Typen -->
-      <text text-anchor="middle" x="-100" y="-183" fill="black">Dominant</text>
-      <text text-anchor="middle" x="100" y="-183" fill="black">Initiativ</text>
-      <text text-anchor="middle" x="100" y="195" fill="black">Stetig</text>
-      <text text-anchor="middle" x="-100" y="195" fill="black">Gewissenhaft</text>
+        <!-- axis labels -->
+        <text x="0" y="0" fill="black">10</text>
+        <text text-anchor="end" x="-200" y="-205" fill="black">40</text>
+        <text text-anchor="start" x="200" y="-205" fill="black">40</text>
+        <text text-anchor="start" x="200" y="215" fill="black">40</text>
+        <text text-anchor="end" x="-200" y="215" fill="black">40</text>
+        <!-- DISG Typen -->
+        <text text-anchor="middle" x="-100" y="-183" fill="black">Dominant</text>
+        <text text-anchor="middle" x="100" y="-183" fill="black">Initiativ</text>
+        <text text-anchor="middle" x="100" y="195" fill="black">Stetig</text>
+        <text text-anchor="middle" x="-100" y="195" fill="black">Gewissenhaft</text>
 
-      <text text-anchor="middle" x="-125" y="-225" font-weight="800" font-size="1.2em" fill="black">anstrengend /
-        stressig
-      </text>
-      <text text-anchor="middle" x="125" y="-225" font-weight="800" font-size="1.2em" fill="black">angenehm / nicht
-        stressig
-      </text>
-      <text text-anchor="middle" x="125" y="-225" font-weight="800" font-size="1.2em" transform="rotate(270)"
-            fill="black">bestimmt
-      </text>
-      <text text-anchor="middle" x="-125" y="-225" font-weight="800" font-size="1.2em" transform="rotate(270)"
-            fill="black">zurückhaltend
-      </text>
+        <text text-anchor="middle" x="-125" y="-225" font-weight="800" font-size="1.2em" fill="black">anstrengend /
+          stressig
+        </text>
+        <text text-anchor="middle" x="125" y="-225" font-weight="800" font-size="1.2em" fill="black">angenehm / nicht
+          stressig
+        </text>
+        <text text-anchor="middle" x="125" y="-225" font-weight="800" font-size="1.2em" transform="rotate(270)"
+              fill="black">bestimmt
+        </text>
+        <text text-anchor="middle" x="-125" y="-225" font-weight="800" font-size="1.2em" transform="rotate(270)"
+              fill="black">zurückhaltend
+        </text>
 
-      <!-- points on axis -->
-      <text *ngIf="result[0] > 0" text-anchor="end" attr.x="{{-calc(result[0])}}" attr.y="{{-calc(result[0])-5}}"
-            fill="black">{{result[0]}}
-      </text>
-      <text *ngIf="result[1] > 0" text-anchor="start" attr.x="{{calc(result[1])}}" attr.y="{{-calc(result[1])-5}}"
-            fill="black">
-        {{result[1]}}
-      </text>
-      <text *ngIf="result[2] > 0" text-anchor="start" attr.x="{{calc(result[2])}}" attr.y="{{calc(result[2])+15}}"
-            fill="black">
-        {{result[2]}}
-      </text>
-      <text *ngIf="result[3] > 0" text-anchor="end" attr.x="{{-calc(result[3])}}" attr.y="{{calc(result[3])+15}}"
-            fill="black">{{result[3]}}
-      </text>
-    </svg>
-    <mat-chip-list class="container">
-      <mat-chip>Dominant: {{result[0]}}</mat-chip>
-      <mat-chip>Initiativ: {{result[1]}}</mat-chip>
-    </mat-chip-list>
-    <mat-chip-list class="container">
-      <mat-chip>Gewissenhaft: {{result[3]}}</mat-chip>
-      <mat-chip>Stetig: {{result[2]}}</mat-chip>
-    </mat-chip-list>
+        <!-- points on axis -->
+        <text *ngIf="result[0] > 0" text-anchor="end" attr.x="{{-calc(result[0])}}" attr.y="{{-calc(result[0])-5}}"
+              fill="black">{{result[0]}}
+        </text>
+        <text *ngIf="result[1] > 0" text-anchor="start" attr.x="{{calc(result[1])}}" attr.y="{{-calc(result[1])-5}}"
+              fill="black">
+          {{result[1]}}
+        </text>
+        <text *ngIf="result[2] > 0" text-anchor="start" attr.x="{{calc(result[2])}}" attr.y="{{calc(result[2])+15}}"
+              fill="black">
+          {{result[2]}}
+        </text>
+        <text *ngIf="result[3] > 0" text-anchor="end" attr.x="{{-calc(result[3])}}" attr.y="{{calc(result[3])+15}}"
+              fill="black">{{result[3]}}
+        </text>
+      </svg>
+      <mat-chip-list class="container">
+        <mat-chip>Dominant: {{result[0]}}</mat-chip>
+        <mat-chip>Initiativ: {{result[1]}}</mat-chip>
+      </mat-chip-list>
+      <mat-chip-list class="container">
+        <mat-chip>Gewissenhaft: {{result[3]}}</mat-chip>
+        <mat-chip>Stetig: {{result[2]}}</mat-chip>
+      </mat-chip-list>
+    </div>
   </mat-card>
   <span class="fill-remaining-space"></span>
 </div>

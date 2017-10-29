@@ -11,7 +11,7 @@ export class EvaluationComponent implements OnInit {
   public result: number[];
   private quadrantWith = 200;
 
-  constructor(private evaluationService: EvaluationService) {
+  constructor(public evaluationService: EvaluationService) {
   }
 
   ngOnInit() {
