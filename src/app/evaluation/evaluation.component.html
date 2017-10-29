@@ -52,15 +52,19 @@
       </text>
 
       <!-- points on axis -->
-      <text text-anchor="end" attr.x="{{-calc(result[0])}}" attr.y="{{-calc(result[0])-5}}" fill="black">{{result[0]}}
+      <text *ngIf="result[0] > 0" text-anchor="end" attr.x="{{-calc(result[0])}}" attr.y="{{-calc(result[0])-5}}"
+            fill="black">{{result[0]}}
       </text>
-      <text text-anchor="start" attr.x="{{calc(result[1])}}" attr.y="{{-calc(result[1])-5}}" fill="black">
+      <text *ngIf="result[1] > 0" text-anchor="start" attr.x="{{calc(result[1])}}" attr.y="{{-calc(result[1])-5}}"
+            fill="black">
         {{result[1]}}
       </text>
-      <text text-anchor="start" attr.x="{{calc(result[2])}}" attr.y="{{calc(result[2])+15}}" fill="black">
+      <text *ngIf="result[2] > 0" text-anchor="start" attr.x="{{calc(result[2])}}" attr.y="{{calc(result[2])+15}}"
+            fill="black">
         {{result[2]}}
       </text>
-      <text text-anchor="end" attr.x="{{-calc(result[3])}}" attr.y="{{calc(result[3])+15}}" fill="black">{{result[3]}}
+      <text *ngIf="result[3] > 0" text-anchor="end" attr.x="{{-calc(result[3])}}" attr.y="{{calc(result[3])+15}}"
+            fill="black">{{result[3]}}
       </text>
     </svg>
     <mat-chip-list class="container">
