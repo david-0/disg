@@ -8,7 +8,6 @@
     </mat-panel-description>
   </mat-expansion-panel-header>
   <article>
-    <h1>Persönlichkeitstest Instruktionen</h1>
     <p>Denke dich beim Ausfüllen der Selbsteinschätzung in ein <strong>bestimmtes Umfeld</strong> hinein. Es spielt
       dabei keine Rolle, ob
       Du dies für deine persönliche oder deine berufliche Situation ausfüllst. Entscheide dich jedoch für ein bestimmtes
@@ -17,18 +16,18 @@
     <ul>
       <li>Lese alle 4 Wörter einer Gruppe</li>
       <li>Wähle das Wort aus, welches <strong>am ehesten</strong> zutrifft(
-        <app-point class="inline" [selected]="true" [points]="3"></app-point>
+        <app-point class="inline" [selected]="true" [points]="4"></app-point>
         = 4 Punkte).
       </li>
       <li>Studiere die übrigen 3 Wörter in der Gruppe</li>
       <li>Wähle das Wort aus, welche <strong>am wenigsten</strong> zutrifft(
-        <app-point class="inline" [selected]="true" [points]="0"></app-point>
+        <app-point class="inline" [selected]="true" [points]="1"></app-point>
         = 1 Punkt)
       </li>
       <li>Ordne den übrigen 2 Wörter entweder 2 Punkte (
-        <app-point class="inline" [selected]="true" [points]="1"></app-point>
-        ) oder 3 Punkte (
         <app-point class="inline" [selected]="true" [points]="2"></app-point>
+        ) oder 3 Punkte (
+        <app-point class="inline" [selected]="true" [points]="3"></app-point>
         ) zu.
       </li>
     </ul>
