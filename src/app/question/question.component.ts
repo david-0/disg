@@ -45,12 +45,8 @@ export class QuestionComponent implements AfterViewChecked {
   }
 
   private findMissingPosition(): number {
-    for (let i = 0; i < this.answer.priorities.length; i++) {
-      if (this.answer.priorities[i] === 0) {
-        return i;
-      }
-    }
-    return null;
+    const index = this.answer.priorities.findIndex(p => p === 0);
+    return (index === -1) ? null : index;
   }
 
   private findMissingNumber(): number {
