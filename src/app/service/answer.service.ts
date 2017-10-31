@@ -18,7 +18,7 @@ export class AnswerService {
   getValue(position: number): Answer {
     let answer = this._answers.get(position);
     if (!answer) {
-      answer = new Answer(position, [-1, -1, -1, -1]);
+      answer = new Answer(position, [0, 0, 0, 0]);
     }
     return answer;
   }

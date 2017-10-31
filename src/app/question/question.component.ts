@@ -21,6 +21,7 @@ export class QuestionComponent implements AfterViewChecked {
 
   change(points: number, statementNr: string) {
     this.updatePriorities(points, +statementNr);
+    console.info('' + points + ' ' + statementNr);
     this.updateLastPriority();
     this.onAnswerChange.emit(this.answer);
   }
@@ -29,13 +30,13 @@ export class QuestionComponent implements AfterViewChecked {
     this.answer.priorities[statementNr] = +points;
     for (let i = 0; i < 4; i++) {
       if (i !== statementNr && this.answer.priorities[i] === +points) {
-        this.answer.priorities[i] = -1;
+        this.answer.priorities[i] = 0;
       }
     }
   }
 
   private updateLastPriority() {
-    if (this.answer.priorities.filter(p => p === -1).length === 1) {
+    if (this.answer.priorities.filter(p => p === 0).length === 1) {
       const missingPos = this.findMissingPosition();
       if (missingPos != null) {
         this.answer.priorities[missingPos] = this.findMissingNumber();
@@ -45,7 +46,7 @@ export class QuestionComponent implements AfterViewChecked {
 
   private findMissingPosition(): number {
     for (let i = 0; i < this.answer.priorities.length; i++) {
-      if (this.answer.priorities[i] === -1) {
+      if (this.answer.priorities[i] === 0) {
         return i;
       }
     }
@@ -53,7 +54,7 @@ export class QuestionComponent implements AfterViewChecked {
   }
 
   private findMissingNumber(): number {
-    for (let i = 0; i < this.answer.priorities.length; i++) {
+    for (let i = 1; i <= this.answer.priorities.length; i++) {
       if (this.answer.priorities.findIndex(p => p === i) === -1) {
         return i;
       }

@@ -14,7 +14,7 @@ export class EvaluationService {
       const a = this.answerService.getValue(q.id);
       let complete = true;
       for (let i = 0; i < a.priorities.length; i++) {
-        if (a.priorities[i] === -1) {
+        if (a.priorities[i] === 0) {
           complete = false;
         }
       }
@@ -33,13 +33,13 @@ export class EvaluationService {
     let numberOfPartialAnswers = 0;
     this.questionService.questions.forEach(q => {
       const a = this.answerService.getValue(q.id);
-      let complete = false;
+      let partial = false;
       for (let i = 0; i < a.priorities.length; i++) {
-        if (a.priorities[i] === -1) {
-          complete = true;
+        if (a.priorities[i] === 0) {
+          partial = true;
         }
       }
-      if (complete) {
+      if (partial) {
         numberOfPartialAnswers++;
       }
     });
@@ -47,7 +47,7 @@ export class EvaluationService {
   }
 
   public evaluate() {
-    const result = [10, 10, 10, 10];
+    const result = [0, 0, 0, 0];
     const mapping = ['d', 'i', 's', 'g'];
     this.questionService.questions.forEach(q => {
       const a = this.answerService.getValue(q.id);
