@@ -1,11 +1,11 @@
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-points',
-  templateUrl: './points.component.html',
-  styleUrls: ['./points.component.scss']
+  selector: 'app-cubes',
+  templateUrl: './cubes.component.html',
+  styleUrls: ['./cubes.component.scss']
 })
-export class PointsComponent implements OnInit {
+export class CubesComponent implements OnInit {
 
   @Input() selected: number;
   @Output() onChange = new EventEmitter<number>();

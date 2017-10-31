@@ -5,7 +5,7 @@ import {Component, OnInit, Input, Output, EventEmitter, ElementRef, ViewChild, R
   templateUrl: './cube.component.html',
   styleUrls: ['./cube.component.scss']
 })
-export class PointComponent implements OnInit {
+export class CubeComponent implements OnInit {
 
   @ViewChild('svg') svg: ElementRef;
   // range from 1-4

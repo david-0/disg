@@ -21,8 +21,8 @@ import {QuestionComponent} from './question/question.component';
 import {AnswerService} from './service/answer.service';
 import {EvaluationService} from './service/evaluation.service';
 import {QuestionService} from './service/question.service';
-import {PointComponent} from './cube/cube.component';
-import { PointsComponent } from './points/points.component';
+import {CubeComponent} from './cube/cube.component';
+import {CubesComponent} from './cubes/cubes.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +32,8 @@ import { PointsComponent } from './points/points.component';
     ManualComponent,
     DataprotectionComponent,
     DashboardComponent,
-    PointComponent,
-    PointsComponent,
+    CubeComponent,
+    CubesComponent,
   ],
   imports: [
     BrowserModule,
