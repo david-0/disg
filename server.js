@@ -17,5 +17,5 @@ app.get('/*', function (req, res) {
 
 var port = process.env.PORT || 8080
 app.listen(port);
-console.info('DISG Server at http://0.0.0.0:' + port + '/');
+console.info('Server at http://0.0.0.0:' + port + '/');
 
