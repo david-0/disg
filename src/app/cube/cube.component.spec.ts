@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PointComponent } from './point.component';
+import { PointComponent } from './cube.component';
 
 describe('PointComponent', () => {
   let component: PointComponent;

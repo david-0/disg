@@ -21,7 +21,7 @@ import {QuestionComponent} from './question/question.component';
 import {AnswerService} from './service/answer.service';
 import {EvaluationService} from './service/evaluation.service';
 import {QuestionService} from './service/question.service';
-import {PointComponent} from './point/point.component';
+import {PointComponent} from './cube/cube.component';
 import { PointsComponent } from './points/points.component';
 
 @NgModule({

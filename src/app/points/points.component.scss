@@ -1,11 +1,11 @@
-app-point {
+app-cube {
   flex-shrink: 0;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  app-point {
+  app-cube {
     padding: 0 0.1em;
   }
 }

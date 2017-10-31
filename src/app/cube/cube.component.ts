@@ -1,9 +1,9 @@
 import {Component, OnInit, Input, Output, EventEmitter, ElementRef, ViewChild, Renderer2} from '@angular/core';
 
 @Component({
-  selector: 'app-point',
-  templateUrl: './point.component.html',
-  styleUrls: ['./point.component.scss']
+  selector: 'app-cube',
+  templateUrl: './cube.component.html',
+  styleUrls: ['./cube.component.scss']
 })
 export class PointComponent implements OnInit {
 
