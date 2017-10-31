@@ -6,8 +6,6 @@
 <div class="container">
   <span class="fill-remaining-space"></span>
   <mat-card class="card">
-    <mat-card-subtitle *ngIf="evaluationService.allQuestionsCompleted()">Es wurden alle Wortgruppen vollständig beantwortet.
-    </mat-card-subtitle>
     <mat-card-subtitle *ngIf="!evaluationService.allQuestionsCompleted()">Die Auswertung konnte aufgrund von fehlenden
       Antworten nicht erstellt werden.
       <ul>
@@ -17,7 +15,7 @@
       Bitte zuerst alle Wortgruppen beantworten.
     </mat-card-subtitle>
     <div *ngIf="evaluationService.allQuestionsCompleted()">
-      <svg version="1.1" x="0px" y="0px" viewBox="-250 -250 500 500">
+      <svg version="1.1" x="0px" y="0px" viewBox="-275 -275 525 525">
         <rect id="d" x="-250" y="-250" width="250" height="250" fill="#ff0000" opacity="0.8"/>
         <rect id="i" x="0" y="-250" width="250" height="250" fill="#ffff00" opacity="0.8"/>
         <rect id="s" x="0" y="0" width="250" height="250" fill="#00ff00" opacity="0.8"/>
@@ -49,11 +47,17 @@
         <text text-anchor="middle" x="100" y="195" fill="black">Stetig</text>
         <text text-anchor="middle" x="-100" y="195" fill="black">Gewissenhaft</text>
 
+        <text text-anchor="middle" x="0" y="-260" font-weight="800" font-size="1.2em" fill="black">Wie nehme ich mein
+          Umfeld wahr?
+        </text>
         <text text-anchor="middle" x="-125" y="-225" font-weight="800" font-size="1.2em" fill="black">anstrengend /
           stressig
         </text>
         <text text-anchor="middle" x="125" y="-225" font-weight="800" font-size="1.2em" fill="black">angenehm / nicht
           stressig
+        </text>
+        <text text-anchor="middle" x="0" y="-260" font-weight="800" font-size="1.2em" transform="rotate(270)"
+              fill="black">Wie reagiere ich auf mein Umfeld?
         </text>
         <text text-anchor="middle" x="125" y="-225" font-weight="800" font-size="1.2em" transform="rotate(270)"
               fill="black">bestimmt
