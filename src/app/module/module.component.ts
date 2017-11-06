@@ -21,7 +21,7 @@ export class ModuleComponent implements OnInit {
     this.moduleNumber = '';
   }
 
-  resetModule() {
-    this.moduleService.resetModule();
+  resetModules() {
+    this.moduleService.resetModules();
   }
 }

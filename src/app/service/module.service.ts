@@ -24,7 +24,7 @@ export class ModuleService {
     }
   }
 
-  public resetModule() {
+  public resetModules() {
     localStorage.removeItem('modules');
     this.loadedModules.clear();
     this.saveState();
