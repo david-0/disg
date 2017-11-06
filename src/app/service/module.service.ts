@@ -24,6 +24,12 @@ export class ModuleService {
     }
   }
 
+  public resetModule() {
+    localStorage.removeItem('modules');
+    this.loadedModules.clear();
+    this.saveState();
+  }
+
   public getModuleName(number: number) {
     return this.availableModules.get(number);
   }

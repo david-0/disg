@@ -19,4 +19,8 @@ export class ModuleComponent implements OnInit {
   loadModule() {
     this.moduleService.loadModule(+this.moduleNumber);
   }
+
+  resetModule() {
+    this.moduleService.resetModule();
+  }
 }
