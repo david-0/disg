@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <span>Selbsteinschätzung</span>
+</mat-toolbar>
+<app-manual></app-manual>
+<app-dataprotection></app-dataprotection>
+<div class="container">
+  <div *ngFor="let q of questionService.questions" class="panel">
+    <app-question [question]="q" [answer]="answerService.getValue(q.id)"
+                  (onAnswerChange)="onAnswerChange($event)"></app-question>
+  </div>
+</div>
+<div class="evaluation">
+  <button mat-raised-button color="primary" routerLink="../evaluation">Auswertung</button>
+</div>

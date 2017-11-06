@@ -1,0 +1,16 @@
+<div class="container">
+  <form>
+    <mat-form-field class="module">
+      <input matInput [(ngModel)]="moduleNumber" name="moduleNumber" placeholder="Modul laden" value="">
+    </mat-form-field>
+    <button mat-raised-button (click)="loadModule()" color="primary">Laden</button>
+  </form>
+</div>
+<mat-toolbar>
+  <span>Geladene Module</span>
+</mat-toolbar>
+<div class="multiline-container" *ngFor="let moduleKey of moduleService.loadedModules">
+  <button mat-raised-button routerLink="../{{moduleKey}}" color="primary">
+    {{moduleService.getModuleName(moduleKey)}}
+  </button>
+</div>
