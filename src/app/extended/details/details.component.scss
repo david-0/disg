@@ -1,34 +1,38 @@
-mat-checkbox.checkbox {
+.checkbox-text-wrap {
+  white-space: normal;
+}
+
+.mat-checkbox {
   display: block;
-  .mat-checkbox-layout {
-    background: yellow;
-    .mat-checkbox-label {
-      white-space: pre-wrap;
-    }
-  }
+  background: #FAFAFA;
+  padding: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 4px;
 }
 
-.mat-checkbox-label {
-  white-space: pre-wrap;
-  background: yellow;
+.mat-card {
+  padding: 6px;
 }
 
-.mat-checkbox-layout {
-  line-height: 30px;
-  white-space: pre-wrap;
-  background: red;
+.block {
+  min-width: 250px;
+  max-width: 340px;
+  margin: 4px;
 }
 
-checkbox label.mat-checkbox-layout span.mat-checkbox-label {
-  background: blue;
+.mat-card-title {
+  font-size: 1.2em;
+  margin: 8px;
+  font-weight: 500;
+}
+
+.block-title {
+  font-size: 1.4em;
+  font-weight: 400;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-}
-
-.block {
-  //  min-width: 300px;
-  //  white-space: pre-line;
 }

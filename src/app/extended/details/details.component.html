@@ -4,14 +4,15 @@
 </mat-toolbar>
 <div class="container">
   <mat-card *ngFor="let block of blocks">
-    <mat-card-title>{{block.title}}</mat-card-title>
+    <mat-card-title class="block-title">{{block.title}}</mat-card-title>
     <mat-card-content>
-      <div class="container">
+      <div class="container container-margin">
         <mat-card *ngFor="let detail of block.blocks" class="block">
           <mat-card-title>{{detail.title}}</mat-card-title>
           <mat-card-content>
             <mat-checkbox class="checkbox" (change)="onChange()" [(ngModel)]="message.checked"
-                          *ngFor="let message of detail.messages">{{message.text}}
+                          *ngFor="let message of detail.messages">
+              <span class="checkbox-text-wrap">{{message.text}}</span>
             </mat-checkbox>
           </mat-card-content>
         </mat-card>

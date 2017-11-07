@@ -24,7 +24,7 @@ export class DetailsDComponent implements OnInit {
         new DetailBlock('Ideales Umfeld für "Dominante"', [
           new Message('eine starke, einflussreiche Position'),
           new Message('neue, abwechslungsreiche Aufgaben'),
-          new Message('vir Bewegungsfreiheit bei der Arbeit'),
+          new Message('viel Bewegungsfreiheit bei der Arbeit'),
           new Message('direkte Antworten, wenig Diskussion'),
           new Message('Herausforderungen und Ansehen'),
           new Message('wenig Kontrolle und Beaufsichtigung'),
