@@ -35,6 +35,7 @@ import {DetailsService} from './service/details.service';
 import {EvaluationService} from './service/evaluation.service';
 import {ModuleService} from './service/module.service';
 import {QuestionService} from './service/question.service';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {QuestionService} from './service/question.service';
     ModuleComponent,
     SelfAssessmentComponent,
     DetailsComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserModule,
