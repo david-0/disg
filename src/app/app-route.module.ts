@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {path: '9382', component: SelfAssessmentComponent},
-  {path: 'evaluation', component: EvaluationComponent},
+  {path: '9382/evaluation', component: EvaluationComponent},
   {path: '1720', component: DetailsDComponent},
   {path: '6288', component: DetailsIComponent},
   {path: '8471', component: DetailsSComponent},

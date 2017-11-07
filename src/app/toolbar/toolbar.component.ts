@@ -1,4 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
+import {isNullOrUndefined} from 'util';
 
 @Component({
   selector: 'app-toolbar',
@@ -8,10 +9,14 @@ import {Component, OnInit, Input} from '@angular/core';
 export class ToolbarComponent implements OnInit {
 
   @Input() title: string;
+  @Input() backLink: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    if (isNullOrUndefined(this.backLink)) {
+      this.backLink = '..';
+    }
+  }
 }
