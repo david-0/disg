@@ -42,7 +42,7 @@ export class DetailsDComponent implements OnInit {
       ]),
         new DetailBlock('"D"-braucht andere, die', [
           new Message('Routine-Arbeiten gerne erledigen'),
-          new Message('besonnen mit mit Vorsicht handeln'),
+          new Message('besonnen mit Vorsicht handeln'),
           new Message('auf Details und Fakten achten'),
           new Message('das Für und Wider gegenüberstellen'),
           new Message('Risiken abschätzen und berechnen'),
