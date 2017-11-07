@@ -21,13 +21,20 @@ export class DetailsService {
     localStorage.setItem(key, JSON.stringify(result));
   }
 
+  public loadValues(key: string): boolean[][] {
+    const item = localStorage.getItem(key);
+    if (isNullOrUndefined(item)) {
+      return null;
+    }
+    return JSON.parse(item);
+  }
+
   public loadState(key: string, blocks: Block[]) {
-    const result: boolean[][] = [];
     const item = localStorage.getItem(key);
     if (isNullOrUndefined(item)) {
       return;
     }
-    const state: boolean[][] = JSON.parse(item);
+    const state: boolean[][] = JSON.parse(item);;
     for (let i = 0; i < blocks.length; i++) {
       const detailBlocks = blocks[i].blocks;
       for (let j = 0; j < detailBlocks.length; j++) {

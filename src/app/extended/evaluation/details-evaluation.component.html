@@ -1,0 +1,8 @@
+<app-toolbar title="Auswertung Details"></app-toolbar>
+<mat-card>
+  <mat-card-content>
+    <div *ngFor="let result of values" class="container borders">
+      <span>Aussagen '{{result.name}}':</span><span class="fill-remaining-space"></span><span><b>{{(result.value *100)| number:'1.1-1'}}%</b></span>
+    </div>
+  </mat-card-content>
+</mat-card>

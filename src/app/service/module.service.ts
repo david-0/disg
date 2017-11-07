@@ -13,6 +13,7 @@ export class ModuleService {
     this.availableModules.set(6288, 'Details: Initiativ');
     this.availableModules.set(8471, 'Details: Stetig');
     this.availableModules.set(4343, 'Details: Gewissenhaft');
+    this.availableModules.set(5119, 'Auswertung Details');
     this.loadState();
   }
 

@@ -26,6 +26,7 @@ import {DetailsGComponent} from './extended/details-g/details-g.component';
 import {DetailsIComponent} from './extended/details-i/details-i.component';
 import {DetailsSComponent} from './extended/details-s/details-s.component';
 import {DetailsComponent} from './extended/details/details.component';
+import {DetailsEvaluationComponent} from './extended/evaluation/details-evaluation.component';
 import {ManualComponent} from './manual/manual.component';
 import {ModuleComponent} from './module/module.component';
 import {QuestionComponent} from './question/question.component';
@@ -35,7 +36,8 @@ import {DetailsService} from './service/details.service';
 import {EvaluationService} from './service/evaluation.service';
 import {ModuleService} from './service/module.service';
 import {QuestionService} from './service/question.service';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import {ToolbarComponent} from './toolbar/toolbar.component';
+import { DetailsEvaluationService } from './extended/service/details-evaluation.service';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     SelfAssessmentComponent,
     DetailsComponent,
     ToolbarComponent,
+    DetailsEvaluationComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     EvaluationService,
     DetailsService,
     ModuleService,
+    DetailsEvaluationService,
   ],
   bootstrap: [AppComponent]
 })
