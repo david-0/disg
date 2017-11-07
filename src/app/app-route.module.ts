@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'evaluation', component: EvaluationComponent},
   {path: '1720', component: DetailsDComponent},
   {path: '6288', component: DetailsIComponent},
-  {path: '8411', component: DetailsSComponent},
+  {path: '8471', component: DetailsSComponent},
   {path: '4343', component: DetailsGComponent},
 ];
 

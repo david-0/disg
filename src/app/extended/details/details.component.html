@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/dashboard">back</button>
+  <span>Details {{type}}</span>
+</mat-toolbar>
+<div class="container">
+  <mat-card *ngFor="let block of blocks">
+    <mat-card-title>{{block.title}}</mat-card-title>
+    <mat-card-content>
+      <div class="container">
+        <mat-card *ngFor="let detail of block.blocks" class="block">
+          <mat-card-title>{{detail.title}}</mat-card-title>
+          <mat-card-content>
+            <mat-checkbox class="checkbox" (change)="onChange()" [(ngModel)]="message.checked"
+                          *ngFor="let message of detail.messages">{{message.text}}
+            </mat-checkbox>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

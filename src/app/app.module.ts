@@ -8,7 +8,7 @@ import {
   MatToolbarModule,
   MatExpansionModule,
   MatChipsModule,
-  MatInputModule
+  MatInputModule, MatCheckboxModule
 } from '@angular/material';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -33,6 +33,7 @@ import {DetailsService} from './service/details.service';
 import {EvaluationService} from './service/evaluation.service';
 import {ModuleService} from './service/module.service';
 import {QuestionService} from './service/question.service';
+import { DetailsComponent } from './extended/details/details.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import {QuestionService} from './service/question.service';
     DetailsGComponent,
     ModuleComponent,
     SelfAssessmentComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +68,7 @@ import {QuestionService} from './service/question.service';
     AppRouteModule,
     MatChipsModule,
     MatInputModule,
+    MatCheckboxModule,
   ],
   providers: [
     AnswerService,

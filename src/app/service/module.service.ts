@@ -9,7 +9,7 @@ export class ModuleService {
 
   constructor() {
     this.availableModules.set(9382, 'Selbsteinschätzung');
-    this.availableModules.set(1720, 'Details: Dominat');
+    this.availableModules.set(1720, 'Details: Dominant');
     this.availableModules.set(6288, 'Details: Initiativ');
     this.availableModules.set(8471, 'Details: Stetig');
     this.availableModules.set(4343, 'Details: Gewissenhaft');
