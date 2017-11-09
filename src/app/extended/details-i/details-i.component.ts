@@ -34,7 +34,7 @@ export class DetailsIComponent implements OnInit {
       [new DetailBlock('Mögliche Schwächen', [
         new Message('tendiert dazu, Dinge nicht konsequent zu Ende zu bringen'),
         new Message('Subjektivität bei Entscheidungen'),
-        new Message('kann ergebnisse zu optimistisch einschätzen'),
+        new Message('kann Ergebnisse zu optimistisch einschätzen'),
         new Message('tendiert dazu, zu viel zu reden, handelt zu impulsiv'),
         new Message('versucht, zuviel auf einmal zu tun'),
         new Message('mag es nicht, allein sein zu müssen'),

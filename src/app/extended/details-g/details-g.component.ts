@@ -46,7 +46,7 @@ export class DetailsGComponent implements OnInit {
           new Message('wichtige Aufgaben gründlich erarbeitet haben wollen'),
           new Message('unpopuläre Standpunkte aussprechen'),
           new Message('kompromissfähig und flexibel sind'),
-          new Message('Anweisungen nur als Richtlinien'),
+          new Message('Anweisungen nur als Richtlinien sehen'),
         ])]));
   }
 

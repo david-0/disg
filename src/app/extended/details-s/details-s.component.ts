@@ -42,12 +42,12 @@ export class DetailsSComponent implements OnInit {
       ]),
         new DetailBlock('"S"-braucht andere, die', [
           new Message('neue Herausforderungen annehmen'),
-          new Message('Hilfe bei schwierigen Problemen'),
+          new Message('Hilfe bei schwierigen Problemen bieten'),
           new Message('schnell auf Veränderungen reagieren'),
           new Message('Unvorhergesehenes bewältigen können'),
           new Message('Aufgaben delegieren'),
           new Message('Initiative zeigen, Neues initiieren'),
-          new Message('Unangenehmees direkt angehen'),
+          new Message('Unangenehmes direkt angehen'),
         ])]));
   }
 
