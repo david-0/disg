@@ -9,11 +9,11 @@ export class ModuleService {
 
   constructor() {
     this.availableModules.set(9382, 'Selbsteinschätzung');
-    this.availableModules.set(1720, 'Details: Dominant');
-    this.availableModules.set(6288, 'Details: Initiativ');
-    this.availableModules.set(8471, 'Details: Stetig');
-    this.availableModules.set(4343, 'Details: Gewissenhaft');
-    this.availableModules.set(5119, 'Auswertung Details');
+    this.availableModules.set(1720, 'Dominanter Verhaltsstil');
+    this.availableModules.set(6288, 'Initiativer Verhaltsstil');
+    this.availableModules.set(8471, 'Stetiger Verhaltsstil');
+    this.availableModules.set(4343, 'Gewissenhafter Verhaltsstil');
+    this.availableModules.set(5119, 'Auswertungsübersicht');
     this.loadState();
   }
 

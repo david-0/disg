@@ -15,7 +15,24 @@
 .mat-card {
   padding: 0.8em;
 }
+
 .card {
   width: 100%;
   max-width: 600px;
+}
+
+.red {
+  background: #FFA0A0;
+}
+
+.green {
+  background: #A0FFA0;
+}
+
+.blue {
+  background: #A0A0FF;
+}
+
+.yellow {
+  background: #FFFFA0;
 }

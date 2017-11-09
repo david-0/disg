@@ -5,12 +5,52 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  max-width: 225px;
+  max-width: 200px;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-width: 100px;
+  max-width: 200px;
 }
 
 .borders {
   border-radius: 8px;
-  margin: 8px;
+  margin: 8px 0px;
   padding: 8px;
   background: #F0F0F0;
+}
+
+.mat-card {
+  padding: 5px;
+  margin: 5px;
+}
+
+.mat-card-title {
+  padding: 5px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.red {
+  background: #FFA0A0;
+}
+
+.green {
+  background: #A0FFA0;
+}
+
+.blue {
+  background: #A0A0FF;
+}
+
+.yellow {
+  background: #FFFFA0;
 }

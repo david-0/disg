@@ -1,8 +1,19 @@
-<app-toolbar title="Auswertung Details"></app-toolbar>
-<mat-card>
-  <mat-card-content>
-    <div *ngFor="let result of values" class="container borders">
-      <span>Aussagen '{{result.name}}':</span><span class="fill-remaining-space"></span><span><b>{{(result.value *100)| number:'1.1-1'}}%</b></span>
-    </div>
-  </mat-card-content>
-</mat-card>
+<app-toolbar title="Auswertungsübersicht"></app-toolbar>
+<div class="container-row">
+  <mat-card class="card">
+    <mat-card-title>Verhaltensstile</mat-card-title>
+    <mat-card-content>
+      <div *ngFor="let result of detailValues" class="container borders {{result.className}}">
+        <span>'<b>{{result.name}}</b>':</span><span class="fill-remaining-space"></span><span><b>{{(result.value *100)| number:'1.0-0'}}%</b></span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="card">
+    <mat-card-title>Selbsteinschätzung</mat-card-title>
+    <mat-card-content>
+      <div *ngFor="let result of values" class="container borders {{result.className}}">
+        <span>'<b>{{result.name}}</b>':</span><span class="fill-remaining-space"></span><span><b>{{(result.percent * 100)| number:'1.0-0'}}% ({{result.value}} Punkte)</b></span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

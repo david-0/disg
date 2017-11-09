@@ -52,7 +52,7 @@ export class QuestionService {
       new Statement('i', 'gesellig'),
       new Statement('s', 'unauffällig'),
       new Statement('d', 'furchtos'),
-      new Statement('g', 'struktuiert')]));
+      new Statement('g', 'strukturiert')]));
     this._questions.push(new Question(10, [
       new Statement('d', 'hartnäckig'),
       new Statement('i', 'überzeugend'),
