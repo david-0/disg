@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 var compression = require('compression');
 var http = require('http').Server(app);
-var io = require('socket.io')(http, {origins: 'http://localhost:4200'});
+//var io = require('socket.io')(http, {origins: 'http://localhost:4200'});
+var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 
 app.use(compression());

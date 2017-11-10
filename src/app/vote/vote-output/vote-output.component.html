@@ -9,25 +9,3 @@
     <button mat-mini-fab color="primary" (click)="remove(message)">X</button>
   </div>
 </div>
-<!--
-<md-form-field class="demo-chip-list">
-  <mat-chip-list mdPrefix #chipList>
-    <mat-chip *ngFor="let message of messages" [selectable]="selectable"
-              [removable]="removable" (remove)="remove(message)">
-      {{message}}
-      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-    </mat-chip>
-  </mat-chip-list>
-  <input mdInput placeholder="New fruit..."
-         [mdChipInputFor]="chipList"
-         [mdChipInputSeparatorKeyCodes]="separatorKeysCodes"
-         [mdChipInputAddOnBlur]="addOnBlur"
-         (mdChipInputTokenEnd)="add($event)"/>
-</md-form-field>-->
-<!--<mat-form-field>
-  <mat-chip-list>
-    <div *ngFor="let message of messages" class="chip-div">
-      <mat-chip>{{message}}</mat-chip>
-    </div>
-  </mat-chip-list>
-</mat-form-field>-->

@@ -5,11 +5,12 @@ import * as io from 'socket.io-client';
 @Injectable()
 export class VoteService {
 //  private url: string = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
-  private url: string = window.location.protocol + '//' + window.location.hostname + ':' + 3000;
+//  private url: string = window.location.protocol + '//' + window.location.hostname + ':' + 3000;
   private socket;
 
   constructor() {
-    this.socket = io(this.url);
+//    this.socket = io(this.url);
+    this.socket = io();
   }
 
   sendMessage(message: string) {
