@@ -38,9 +38,10 @@ import {EvaluationService} from './service/evaluation.service';
 import {ModuleService} from './service/module.service';
 import {QuestionService} from './service/question.service';
 import {ToolbarComponent} from './toolbar/toolbar.component';
-import {VoteInputComponent} from './vote/vote-input/vote-input.component';
-import {VoteOutputComponent} from './vote/vote-output/vote-output.component';
 import {VoteService} from './vote/service/vote.service';
+import {VoteInputComponent} from './vote/vote-input/vote-input.component';
+import {VoteInput2Component} from './vote/vote-input2/vote-input2.component';
+import {VoteOutputComponent} from './vote/vote-output/vote-output.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import {VoteService} from './vote/service/vote.service';
     DetailsEvaluationComponent,
     VoteInputComponent,
     VoteOutputComponent,
+    VoteInput2Component,
   ],
   imports: [
     BrowserModule,

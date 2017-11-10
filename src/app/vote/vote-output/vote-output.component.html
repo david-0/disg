@@ -4,7 +4,7 @@
   <button mat-raised-button color="primary" (click)="clear()">Clear</button>
 </div>
 <div>
-  <div *ngFor="let message of messages" (click)="remove(message)" class="chip">
+  <div *ngFor="let message of messages" class="chip">
     <span>{{message}}</span>
     <button mat-mini-fab color="primary" (click)="remove(message)">X</button>
   </div>

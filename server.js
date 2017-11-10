@@ -33,10 +33,14 @@ io.on('connection', function (socket) {
     io.emit('messages', messages);
   });
   socket.on('remove', function (msg) {
-    messages = messages.filter(function (e) {
-      return e !== msg
-    })
-    io.emit('messages', messages);
+    var index = messages.indexOf(msg);
+    if (index >= 0) {
+      messages.splice(index, 1);
+      /*    messages = messages.filter(function (e) {
+            return e !== msg
+          })*/
+      io.emit('messages', messages);
+    }
   });
 });
 

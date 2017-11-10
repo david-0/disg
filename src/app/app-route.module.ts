@@ -10,6 +10,7 @@ import {SelfAssessmentComponent} from './self-assessment/self-assessment.compone
 import {EvaluationComponent} from './evaluation/evaluation.component';
 import {VoteOutputComponent} from './vote/vote-output/vote-output.component';
 import {VoteInputComponent} from './vote/vote-input/vote-input.component';
+import {VoteInput2Component} from './vote/vote-input2/vote-input2.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: '4343', component: DetailsGComponent},
   {path: '5119', component: DetailsEvaluationComponent},
   {path: '8823', component: VoteInputComponent},
+  {path: '8823365', component: VoteInput2Component},
   {path: '237813', component: VoteOutputComponent},
 
 ];

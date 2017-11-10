@@ -1,0 +1,16 @@
+<app-toolbar title="Vote-Input2"></app-toolbar>
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field class="input">
+        <input matInput placeholder="Message" [(ngModel)]="msg"/>
+      </mat-form-field>
+      <button type="submit" (click)="send()" mat-raised-button color="primary">Send</button>
+    </mat-card-content>
+  </mat-card>
+  <button class="margin" mat-raised-button color="primary" (click)="kom()">Kommunikationfähigkeit</button>
+  <button class="margin" mat-raised-button color="primary" (click)="tea()">Teamfähigkeit</button>
+  <button class="margin" mat-raised-button color="primary" (click)="kri()">Umgang mit kritischen Situationen</button>
+  <button class="margin" mat-raised-button color="primary" (click)="ver()">Verantwortungsbewusstsein</button>
+  <button class="margin" mat-raised-button color="primary" (click)="sel()">Selbstbewusstsein</button>
+</div>
