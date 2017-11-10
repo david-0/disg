@@ -15,6 +15,7 @@ export class ModuleService {
     this.availableModules.set(4343, 'Gewissenhafter Verhaltsstil');
     this.availableModules.set(5119, 'Auswertungsübersicht');
     this.availableModules.set(8823, 'Vote Input');
+    this.availableModules.set(8823365, 'Vote Input 2');
     this.availableModules.set(237813, 'Vote Output');
     this.loadState();
   }
