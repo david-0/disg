@@ -1,8 +1,10 @@
-const express = require('express');
-const compression = require('compression');
-const app = express();
+var express = require('express');
+var app = express();
+var compression = require('compression');
+var http = require('http').Server(app);
+var io = require('socket.io')(http, {origins: 'http://localhost:4200'});
+var port = process.env.PORT || 3000;
 
-// use comppression
 app.use(compression());
 
 // Run the app by serving the static files
@@ -15,7 +17,28 @@ app.get('/*', function (req, res) {
   res.sendFile(__dirname + '/dist/index.html');
 });
 
-var port = process.env.PORT || 8080
-app.listen(port);
-console.info('Server at http://0.0.0.0:' + port + '/');
+var messages = [];
 
+io.on('connection', function (socket) {
+  socket.on('add', function (msg) {
+    messages.push(msg);
+    io.emit('messages', messages);
+  });
+  socket.on('clear', function (msg) {
+    messages = [];
+    io.emit('messages', messages);
+  });
+  socket.on('getAll', function (msg) {
+    io.emit('messages', messages);
+  });
+  socket.on('remove', function (msg) {
+    messages = messages.filter(function (e) {
+      return e !== msg
+    })
+    io.emit('messages', messages);
+  });
+});
+
+http.listen(port, function () {
+  console.log('listening on *:' + port);
+});

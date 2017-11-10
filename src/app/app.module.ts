@@ -27,6 +27,7 @@ import {DetailsIComponent} from './extended/details-i/details-i.component';
 import {DetailsSComponent} from './extended/details-s/details-s.component';
 import {DetailsComponent} from './extended/details/details.component';
 import {DetailsEvaluationComponent} from './extended/evaluation/details-evaluation.component';
+import {DetailsEvaluationService} from './extended/service/details-evaluation.service';
 import {ManualComponent} from './manual/manual.component';
 import {ModuleComponent} from './module/module.component';
 import {QuestionComponent} from './question/question.component';
@@ -37,7 +38,9 @@ import {EvaluationService} from './service/evaluation.service';
 import {ModuleService} from './service/module.service';
 import {QuestionService} from './service/question.service';
 import {ToolbarComponent} from './toolbar/toolbar.component';
-import { DetailsEvaluationService } from './extended/service/details-evaluation.service';
+import {VoteInputComponent} from './vote/vote-input/vote-input.component';
+import {VoteOutputComponent} from './vote/vote-output/vote-output.component';
+import {VoteService} from './vote/service/vote.service';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,8 @@ import { DetailsEvaluationService } from './extended/service/details-evaluation.
     DetailsComponent,
     ToolbarComponent,
     DetailsEvaluationComponent,
+    VoteInputComponent,
+    VoteOutputComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,6 +88,7 @@ import { DetailsEvaluationService } from './extended/service/details-evaluation.
     DetailsService,
     ModuleService,
     DetailsEvaluationService,
+    VoteService,
   ],
   bootstrap: [AppComponent]
 })

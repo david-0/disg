@@ -8,6 +8,8 @@ import {DetailsSComponent} from './extended/details-s/details-s.component';
 import {DetailsEvaluationComponent} from './extended/evaluation/details-evaluation.component';
 import {SelfAssessmentComponent} from './self-assessment/self-assessment.component';
 import {EvaluationComponent} from './evaluation/evaluation.component';
+import {VoteOutputComponent} from './vote/vote-output/vote-output.component';
+import {VoteInputComponent} from './vote/vote-input/vote-input.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
@@ -19,6 +21,9 @@ const routes: Routes = [
   {path: '8471', component: DetailsSComponent},
   {path: '4343', component: DetailsGComponent},
   {path: '5119', component: DetailsEvaluationComponent},
+  {path: '8823', component: VoteInputComponent},
+  {path: '237813', component: VoteOutputComponent},
+
 ];
 
 @NgModule({

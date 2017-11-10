@@ -1,0 +1,11 @@
+<app-toolbar title="Vote-Input"></app-toolbar>
+<div class="container">
+  <mat-card>
+    <mat-card-content>
+      <mat-form-field class="input">
+        <input matInput placeholder="Message" [(ngModel)]="msg"/>
+      </mat-form-field>
+      <button type="submit" (click)="send()" mat-raised-button color="primary">Send</button>
+    </mat-card-content>
+  </mat-card>
+</div>

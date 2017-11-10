@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  app-toolbar {
+    flex-grow: 1;
+  }
+}
+
+.chip {
+  background: lightgray;
+  border-radius: 35px;
+  font-size: 35px;
+  line-height:100px;
+  padding: 20px 10px 20px 20px;
+  font-family: "DejaVu Sans";
+  display: inline;
+  margin-right: 10px;
+  span {
+    margin-right: 10px;
+  }
+  button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+/*
+.mat-chip {
+  font-size: 30px;
+  line-height: 1.4em;
+}
+
+.chip-div {
+  margin: 10px;
+}
+*/
