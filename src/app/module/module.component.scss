@@ -14,13 +14,6 @@
   justify-content: center;
 }
 
-.multiline-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  button {
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin: 8px;
-  }
+.margin {
+  margin: 8px;
 }
